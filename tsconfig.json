@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "strict": true,
+        "module": "esnext",
+        "jsx": "react",
+        "allowJs": true,
+        "esModuleInterop": true,
+        "baseUrl": ".",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "paths": {
+            "*": [
+                "src/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
