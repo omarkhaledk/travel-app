@@ -67,14 +67,16 @@ const SearchResult = () => {
                                 Number of Passengers: <b>{numberOfPassengers}</b>
                             </Typography>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <Typography component="p">
-                                Intermediate Cities:
-                            </Typography>
-                            {intermediateCities.split(',').map((city: string, index: number) => (
-                                <Typography component="p" key={index}><b>{city}</b></Typography>
-                            ))}
-                        </Grid>
+                        {intermediateCities
+                            ? <Grid item xs={12} sm={6}>
+                                <Typography component="p">
+                                    Intermediate Cities:
+                                </Typography>
+                                {intermediateCities.split(',').map((city: string, index: number) => (
+                                    <Typography component="p" key={index}><b>{city}</b></Typography>
+                                ))}
+                            </Grid>
+                            : ''}
                         <Grid item xs={12} sm={12}>
                             <Typography component="p">
                                 Date of Trip: <b>{dateOfTrip}</b>
